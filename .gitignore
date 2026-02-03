@@ -8,7 +8,7 @@ venv/
 
 # PyTorch / data
 #*.pth
-*.pt
+#*.pt
 *.npy
 *.pkl
 

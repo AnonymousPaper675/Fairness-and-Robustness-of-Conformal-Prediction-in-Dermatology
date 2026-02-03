@@ -1,0 +1,674 @@
+Starting job
+  test_run          = 1
+  resnet_ckpt_path  = ./best_model_resnet_modified_300_epochs_28_7_2025_train_accuracy_print_test_run_1_save_after_300_epochs.pth
+Host: lrdn0264.leonardo.local
+Date: Fri Jan  9 14:58:15 CET 2026
+CUDA_VISIBLE_DEVICES: 0
+CUDA devices available:
+1
+NVIDIA A100-SXM-64GB
+Device: cuda
+test_run 1
+resnet_ckpt_path: ./best_model_resnet_modified_300_epochs_28_7_2025_train_accuracy_print_test_run_1_save_after_300_epochs.pth
+Train size: 196412
+Val size: 65469
+Test size: 65481
+Classes: ['crops_fair_skin_esantema-maculo-papuloso', 'crops_fair_skin_esantema-morbilliforme', 'crops_fair_skin_esantema-polimorfo-like', 'crops_fair_skin_esantema-virale', 'crops_fair_skin_esantema_iatrogeno_farmaco_indotta', 'crops_fair_skin_orticaria', 'crops_fair_skin_pediculosi', 'crops_fair_skin_scabbia', 'crops_fair_skin_varicella']
+----------------------------------------------------------------
+        Layer (type)               Output Shape         Param #
+================================================================
+            Conv2d-1         [-1, 64, 112, 112]           9,408
+       BatchNorm2d-2         [-1, 64, 112, 112]             128
+              ReLU-3         [-1, 64, 112, 112]               0
+         MaxPool2d-4           [-1, 64, 56, 56]               0
+            Conv2d-5           [-1, 64, 56, 56]           4,096
+       BatchNorm2d-6           [-1, 64, 56, 56]             128
+              ReLU-7           [-1, 64, 56, 56]               0
+            Conv2d-8           [-1, 64, 56, 56]          36,864
+       BatchNorm2d-9           [-1, 64, 56, 56]             128
+             ReLU-10           [-1, 64, 56, 56]               0
+           Conv2d-11          [-1, 256, 56, 56]          16,384
+      BatchNorm2d-12          [-1, 256, 56, 56]             512
+           Conv2d-13          [-1, 256, 56, 56]          16,384
+      BatchNorm2d-14          [-1, 256, 56, 56]             512
+             ReLU-15          [-1, 256, 56, 56]               0
+       Bottleneck-16          [-1, 256, 56, 56]               0
+           Conv2d-17           [-1, 64, 56, 56]          16,384
+      BatchNorm2d-18           [-1, 64, 56, 56]             128
+             ReLU-19           [-1, 64, 56, 56]               0
+           Conv2d-20           [-1, 64, 56, 56]          36,864
+      BatchNorm2d-21           [-1, 64, 56, 56]             128
+             ReLU-22           [-1, 64, 56, 56]               0
+           Conv2d-23          [-1, 256, 56, 56]          16,384
+      BatchNorm2d-24          [-1, 256, 56, 56]             512
+             ReLU-25          [-1, 256, 56, 56]               0
+       Bottleneck-26          [-1, 256, 56, 56]               0
+           Conv2d-27           [-1, 64, 56, 56]          16,384
+      BatchNorm2d-28           [-1, 64, 56, 56]             128
+             ReLU-29           [-1, 64, 56, 56]               0
+           Conv2d-30           [-1, 64, 56, 56]          36,864
+      BatchNorm2d-31           [-1, 64, 56, 56]             128
+             ReLU-32           [-1, 64, 56, 56]               0
+           Conv2d-33          [-1, 256, 56, 56]          16,384
+      BatchNorm2d-34          [-1, 256, 56, 56]             512
+             ReLU-35          [-1, 256, 56, 56]               0
+       Bottleneck-36          [-1, 256, 56, 56]               0
+           Conv2d-37          [-1, 128, 56, 56]          32,768
+      BatchNorm2d-38          [-1, 128, 56, 56]             256
+             ReLU-39          [-1, 128, 56, 56]               0
+           Conv2d-40          [-1, 128, 28, 28]         147,456
+      BatchNorm2d-41          [-1, 128, 28, 28]             256
+             ReLU-42          [-1, 128, 28, 28]               0
+           Conv2d-43          [-1, 512, 28, 28]          65,536
+      BatchNorm2d-44          [-1, 512, 28, 28]           1,024
+           Conv2d-45          [-1, 512, 28, 28]         131,072
+      BatchNorm2d-46          [-1, 512, 28, 28]           1,024
+             ReLU-47          [-1, 512, 28, 28]               0
+       Bottleneck-48          [-1, 512, 28, 28]               0
+           Conv2d-49          [-1, 128, 28, 28]          65,536
+      BatchNorm2d-50          [-1, 128, 28, 28]             256
+             ReLU-51          [-1, 128, 28, 28]               0
+           Conv2d-52          [-1, 128, 28, 28]         147,456
+      BatchNorm2d-53          [-1, 128, 28, 28]             256
+             ReLU-54          [-1, 128, 28, 28]               0
+           Conv2d-55          [-1, 512, 28, 28]          65,536
+      BatchNorm2d-56          [-1, 512, 28, 28]           1,024
+             ReLU-57          [-1, 512, 28, 28]               0
+       Bottleneck-58          [-1, 512, 28, 28]               0
+           Conv2d-59          [-1, 128, 28, 28]          65,536
+      BatchNorm2d-60          [-1, 128, 28, 28]             256
+             ReLU-61          [-1, 128, 28, 28]               0
+           Conv2d-62          [-1, 128, 28, 28]         147,456
+      BatchNorm2d-63          [-1, 128, 28, 28]             256
+             ReLU-64          [-1, 128, 28, 28]               0
+           Conv2d-65          [-1, 512, 28, 28]          65,536
+      BatchNorm2d-66          [-1, 512, 28, 28]           1,024
+             ReLU-67          [-1, 512, 28, 28]               0
+       Bottleneck-68          [-1, 512, 28, 28]               0
+           Conv2d-69          [-1, 128, 28, 28]          65,536
+      BatchNorm2d-70          [-1, 128, 28, 28]             256
+             ReLU-71          [-1, 128, 28, 28]               0
+           Conv2d-72          [-1, 128, 28, 28]         147,456
+      BatchNorm2d-73          [-1, 128, 28, 28]             256
+             ReLU-74          [-1, 128, 28, 28]               0
+           Conv2d-75          [-1, 512, 28, 28]          65,536
+      BatchNorm2d-76          [-1, 512, 28, 28]           1,024
+             ReLU-77          [-1, 512, 28, 28]               0
+       Bottleneck-78          [-1, 512, 28, 28]               0
+           Conv2d-79          [-1, 256, 28, 28]         131,072
+      BatchNorm2d-80          [-1, 256, 28, 28]             512
+             ReLU-81          [-1, 256, 28, 28]               0
+           Conv2d-82          [-1, 256, 14, 14]         589,824
+      BatchNorm2d-83          [-1, 256, 14, 14]             512
+             ReLU-84          [-1, 256, 14, 14]               0
+           Conv2d-85         [-1, 1024, 14, 14]         262,144
+      BatchNorm2d-86         [-1, 1024, 14, 14]           2,048
+           Conv2d-87         [-1, 1024, 14, 14]         524,288
+      BatchNorm2d-88         [-1, 1024, 14, 14]           2,048
+             ReLU-89         [-1, 1024, 14, 14]               0
+       Bottleneck-90         [-1, 1024, 14, 14]               0
+           Conv2d-91          [-1, 256, 14, 14]         262,144
+      BatchNorm2d-92          [-1, 256, 14, 14]             512
+             ReLU-93          [-1, 256, 14, 14]               0
+           Conv2d-94          [-1, 256, 14, 14]         589,824
+      BatchNorm2d-95          [-1, 256, 14, 14]             512
+             ReLU-96          [-1, 256, 14, 14]               0
+           Conv2d-97         [-1, 1024, 14, 14]         262,144
+      BatchNorm2d-98         [-1, 1024, 14, 14]           2,048
+             ReLU-99         [-1, 1024, 14, 14]               0
+      Bottleneck-100         [-1, 1024, 14, 14]               0
+          Conv2d-101          [-1, 256, 14, 14]         262,144
+     BatchNorm2d-102          [-1, 256, 14, 14]             512
+            ReLU-103          [-1, 256, 14, 14]               0
+          Conv2d-104          [-1, 256, 14, 14]         589,824
+     BatchNorm2d-105          [-1, 256, 14, 14]             512
+            ReLU-106          [-1, 256, 14, 14]               0
+          Conv2d-107         [-1, 1024, 14, 14]         262,144
+     BatchNorm2d-108         [-1, 1024, 14, 14]           2,048
+            ReLU-109         [-1, 1024, 14, 14]               0
+      Bottleneck-110         [-1, 1024, 14, 14]               0
+          Conv2d-111          [-1, 256, 14, 14]         262,144
+     BatchNorm2d-112          [-1, 256, 14, 14]             512
+            ReLU-113          [-1, 256, 14, 14]               0
+          Conv2d-114          [-1, 256, 14, 14]         589,824
+     BatchNorm2d-115          [-1, 256, 14, 14]             512
+            ReLU-116          [-1, 256, 14, 14]               0
+          Conv2d-117         [-1, 1024, 14, 14]         262,144
+     BatchNorm2d-118         [-1, 1024, 14, 14]           2,048
+            ReLU-119         [-1, 1024, 14, 14]               0
+      Bottleneck-120         [-1, 1024, 14, 14]               0
+          Conv2d-121          [-1, 256, 14, 14]         262,144
+     BatchNorm2d-122          [-1, 256, 14, 14]             512
+            ReLU-123          [-1, 256, 14, 14]               0
+          Conv2d-124          [-1, 256, 14, 14]         589,824
+     BatchNorm2d-125          [-1, 256, 14, 14]             512
+            ReLU-126          [-1, 256, 14, 14]               0
+          Conv2d-127         [-1, 1024, 14, 14]         262,144
+     BatchNorm2d-128         [-1, 1024, 14, 14]           2,048
+            ReLU-129         [-1, 1024, 14, 14]               0
+      Bottleneck-130         [-1, 1024, 14, 14]               0
+          Conv2d-131          [-1, 256, 14, 14]         262,144
+     BatchNorm2d-132          [-1, 256, 14, 14]             512
+            ReLU-133          [-1, 256, 14, 14]               0
+          Conv2d-134          [-1, 256, 14, 14]         589,824
+     BatchNorm2d-135          [-1, 256, 14, 14]             512
+            ReLU-136          [-1, 256, 14, 14]               0
+          Conv2d-137         [-1, 1024, 14, 14]         262,144
+     BatchNorm2d-138         [-1, 1024, 14, 14]           2,048
+            ReLU-139         [-1, 1024, 14, 14]               0
+      Bottleneck-140         [-1, 1024, 14, 14]               0
+          Conv2d-141          [-1, 512, 14, 14]         524,288
+     BatchNorm2d-142          [-1, 512, 14, 14]           1,024
+            ReLU-143          [-1, 512, 14, 14]               0
+          Conv2d-144            [-1, 512, 7, 7]       2,359,296
+     BatchNorm2d-145            [-1, 512, 7, 7]           1,024
+            ReLU-146            [-1, 512, 7, 7]               0
+          Conv2d-147           [-1, 2048, 7, 7]       1,048,576
+     BatchNorm2d-148           [-1, 2048, 7, 7]           4,096
+          Conv2d-149           [-1, 2048, 7, 7]       2,097,152
+     BatchNorm2d-150           [-1, 2048, 7, 7]           4,096
+            ReLU-151           [-1, 2048, 7, 7]               0
+      Bottleneck-152           [-1, 2048, 7, 7]               0
+          Conv2d-153            [-1, 512, 7, 7]       1,048,576
+     BatchNorm2d-154            [-1, 512, 7, 7]           1,024
+            ReLU-155            [-1, 512, 7, 7]               0
+          Conv2d-156            [-1, 512, 7, 7]       2,359,296
+     BatchNorm2d-157            [-1, 512, 7, 7]           1,024
+            ReLU-158            [-1, 512, 7, 7]               0
+          Conv2d-159           [-1, 2048, 7, 7]       1,048,576
+     BatchNorm2d-160           [-1, 2048, 7, 7]           4,096
+            ReLU-161           [-1, 2048, 7, 7]               0
+      Bottleneck-162           [-1, 2048, 7, 7]               0
+          Conv2d-163            [-1, 512, 7, 7]       1,048,576
+     BatchNorm2d-164            [-1, 512, 7, 7]           1,024
+            ReLU-165            [-1, 512, 7, 7]               0
+          Conv2d-166            [-1, 512, 7, 7]       2,359,296
+     BatchNorm2d-167            [-1, 512, 7, 7]           1,024
+            ReLU-168            [-1, 512, 7, 7]               0
+          Conv2d-169           [-1, 2048, 7, 7]       1,048,576
+     BatchNorm2d-170           [-1, 2048, 7, 7]           4,096
+            ReLU-171           [-1, 2048, 7, 7]               0
+      Bottleneck-172           [-1, 2048, 7, 7]               0
+AdaptiveAvgPool2d-173           [-1, 2048, 1, 1]               0
+          Linear-174                  [-1, 512]       1,049,088
+            ReLU-175                  [-1, 512]               0
+         Dropout-176                  [-1, 512]               0
+          Linear-177                    [-1, 9]           4,617
+================================================================
+Total params: 24,561,737
+Trainable params: 24,561,737
+Non-trainable params: 0
+----------------------------------------------------------------
+Input size (MB): 0.57
+Forward/backward pass size (MB): 286.56
+Params size (MB): 93.70
+Estimated Total Size (MB): 380.83
+----------------------------------------------------------------
+None
+Loading final model checkpoint: ./best_model_resnet_modified_300_epochs_28_7_2025_train_accuracy_print_test_run_1_save_after_300_epochs.pth
+[INFO] Detected DataParallel checkpoint. Stripping 'module.' prefix...
+Model loaded.
+
+Base results directory: Results_normal_Conformal_Prediction_experiment_run_1_2026-01-09_14-58-26
+
+====== Computing calibration scores on validation set ======
+
+
+===================================================
+ Target coverage: 0.65  |  alpha = 0.35
+===================================================
+
+###########################Results:###################################
+test_run 1
+Target coverage: 0.650
+Alpha: 0.350
+Coverage: 0.651
+Average Prediction Set Size for Test Set: 0.651
+######################################################################
+
+ Feature-Stratified Coverage (by True Class Label):
+  Class crops_fair_skin_esantema-maculo-papuloso: Coverage = 0.655 (Target ≥ 0.65)
+  Class crops_fair_skin_esantema-morbilliforme: Coverage = 0.749 (Target ≥ 0.65)
+  Class crops_fair_skin_esantema-polimorfo-like: Coverage = 0.623 (Target ≥ 0.65)
+  Class crops_fair_skin_esantema-virale: Coverage = 0.640 (Target ≥ 0.65)
+  Class crops_fair_skin_esantema_iatrogeno_farmaco_indotta: Coverage = 0.713 (Target ≥ 0.65)
+  Class crops_fair_skin_orticaria: Coverage = 0.633 (Target ≥ 0.65)
+  Class crops_fair_skin_pediculosi: Coverage = 0.729 (Target ≥ 0.65)
+  Class crops_fair_skin_scabbia: Coverage = 0.664 (Target ≥ 0.65)
+  Class crops_fair_skin_varicella: Coverage = 0.647 (Target ≥ 0.65)
+
+ FSC Metric (minimum class-wise coverage): 0.623
+
+ Feature-Stratified Coverage (by True Class Label):
+  Class crops_fair_skin_esantema-maculo-papuloso: Coverage = 0.655 (Target ≥ 0.65)
+  Class crops_fair_skin_esantema-morbilliforme: Coverage = 0.749 (Target ≥ 0.65)
+  Class crops_fair_skin_esantema-polimorfo-like: Coverage = 0.623 (Target ≥ 0.65)
+  Class crops_fair_skin_esantema-virale: Coverage = 0.640 (Target ≥ 0.65)
+  Class crops_fair_skin_esantema_iatrogeno_farmaco_indotta: Coverage = 0.713 (Target ≥ 0.65)
+  Class crops_fair_skin_orticaria: Coverage = 0.633 (Target ≥ 0.65)
+  Class crops_fair_skin_pediculosi: Coverage = 0.729 (Target ≥ 0.65)
+  Class crops_fair_skin_scabbia: Coverage = 0.664 (Target ≥ 0.65)
+  Class crops_fair_skin_varicella: Coverage = 0.647 (Target ≥ 0.65)
+
+ FSC Metric (minimum class-wise coverage): 0.623
+
+ Feature-Stratified Coverage (by True Class Label):
+  Class crops_fair_skin_esantema-maculo-papuloso: Coverage = 0.655 (Target ≥ 0.65)
+  Class crops_fair_skin_esantema-morbilliforme: Coverage = 0.749 (Target ≥ 0.65)
+  Class crops_fair_skin_esantema-polimorfo-like: Coverage = 0.623 (Target ≥ 0.65)
+  Class crops_fair_skin_esantema-virale: Coverage = 0.640 (Target ≥ 0.65)
+  Class crops_fair_skin_esantema_iatrogeno_farmaco_indotta: Coverage = 0.713 (Target ≥ 0.65)
+  Class crops_fair_skin_orticaria: Coverage = 0.633 (Target ≥ 0.65)
+  Class crops_fair_skin_pediculosi: Coverage = 0.729 (Target ≥ 0.65)
+  Class crops_fair_skin_scabbia: Coverage = 0.664 (Target ≥ 0.65)
+  Class crops_fair_skin_varicella: Coverage = 0.647 (Target ≥ 0.65)
+
+ FSC Metric (minimum class-wise coverage): 0.623
+
+ Correlation between class frequency and coverage:
+  - Pearson  r = -0.446, p = 2.284e-01
+  - Spearman ρ = -0.550, p = 1.250e-01
+
+ Size-Stratified Coverage (SSC):
+  Set Size [1]       : Coverage = 0.999 (Target ≥ 0.65)
+
+ SSC Metric (min bin-wise coverage): 0.999
+
+ Size-Stratified Coverage (SSC):
+  Set Size [1]       : Coverage = 0.999 (Target ≥ 0.65)
+
+ SSC Metric (min bin-wise coverage): 0.999
+
+===================================================
+ Target coverage: 0.70  |  alpha = 0.30
+===================================================
+
+###########################Results:###################################
+test_run 1
+Target coverage: 0.700
+Alpha: 0.300
+Coverage: 0.699
+Average Prediction Set Size for Test Set: 0.700
+######################################################################
+
+ Feature-Stratified Coverage (by True Class Label):
+  Class crops_fair_skin_esantema-maculo-papuloso: Coverage = 0.698 (Target ≥ 0.70)
+  Class crops_fair_skin_esantema-morbilliforme: Coverage = 0.787 (Target ≥ 0.70)
+  Class crops_fair_skin_esantema-polimorfo-like: Coverage = 0.664 (Target ≥ 0.70)
+  Class crops_fair_skin_esantema-virale: Coverage = 0.690 (Target ≥ 0.70)
+  Class crops_fair_skin_esantema_iatrogeno_farmaco_indotta: Coverage = 0.762 (Target ≥ 0.70)
+  Class crops_fair_skin_orticaria: Coverage = 0.685 (Target ≥ 0.70)
+  Class crops_fair_skin_pediculosi: Coverage = 0.773 (Target ≥ 0.70)
+  Class crops_fair_skin_scabbia: Coverage = 0.710 (Target ≥ 0.70)
+  Class crops_fair_skin_varicella: Coverage = 0.680 (Target ≥ 0.70)
+
+ FSC Metric (minimum class-wise coverage): 0.664
+
+ Feature-Stratified Coverage (by True Class Label):
+  Class crops_fair_skin_esantema-maculo-papuloso: Coverage = 0.698 (Target ≥ 0.70)
+  Class crops_fair_skin_esantema-morbilliforme: Coverage = 0.787 (Target ≥ 0.70)
+  Class crops_fair_skin_esantema-polimorfo-like: Coverage = 0.664 (Target ≥ 0.70)
+  Class crops_fair_skin_esantema-virale: Coverage = 0.690 (Target ≥ 0.70)
+  Class crops_fair_skin_esantema_iatrogeno_farmaco_indotta: Coverage = 0.762 (Target ≥ 0.70)
+  Class crops_fair_skin_orticaria: Coverage = 0.685 (Target ≥ 0.70)
+  Class crops_fair_skin_pediculosi: Coverage = 0.773 (Target ≥ 0.70)
+  Class crops_fair_skin_scabbia: Coverage = 0.710 (Target ≥ 0.70)
+  Class crops_fair_skin_varicella: Coverage = 0.680 (Target ≥ 0.70)
+
+ FSC Metric (minimum class-wise coverage): 0.664
+
+ Feature-Stratified Coverage (by True Class Label):
+  Class crops_fair_skin_esantema-maculo-papuloso: Coverage = 0.698 (Target ≥ 0.70)
+  Class crops_fair_skin_esantema-morbilliforme: Coverage = 0.787 (Target ≥ 0.70)
+  Class crops_fair_skin_esantema-polimorfo-like: Coverage = 0.664 (Target ≥ 0.70)
+  Class crops_fair_skin_esantema-virale: Coverage = 0.690 (Target ≥ 0.70)
+  Class crops_fair_skin_esantema_iatrogeno_farmaco_indotta: Coverage = 0.762 (Target ≥ 0.70)
+  Class crops_fair_skin_orticaria: Coverage = 0.685 (Target ≥ 0.70)
+  Class crops_fair_skin_pediculosi: Coverage = 0.773 (Target ≥ 0.70)
+  Class crops_fair_skin_scabbia: Coverage = 0.710 (Target ≥ 0.70)
+  Class crops_fair_skin_varicella: Coverage = 0.680 (Target ≥ 0.70)
+
+ FSC Metric (minimum class-wise coverage): 0.664
+
+ Correlation between class frequency and coverage:
+  - Pearson  r = -0.355, p = 3.490e-01
+  - Spearman ρ = -0.333, p = 3.807e-01
+
+ Size-Stratified Coverage (SSC):
+  Set Size [1]       : Coverage = 0.999 (Target ≥ 0.70)
+
+ SSC Metric (min bin-wise coverage): 0.999
+
+ Size-Stratified Coverage (SSC):
+  Set Size [1]       : Coverage = 0.999 (Target ≥ 0.70)
+
+ SSC Metric (min bin-wise coverage): 0.999
+
+===================================================
+ Target coverage: 0.75  |  alpha = 0.25
+===================================================
+
+###########################Results:###################################
+test_run 1
+Target coverage: 0.750
+Alpha: 0.250
+Coverage: 0.749
+Average Prediction Set Size for Test Set: 0.750
+######################################################################
+
+ Feature-Stratified Coverage (by True Class Label):
+  Class crops_fair_skin_esantema-maculo-papuloso: Coverage = 0.733 (Target ≥ 0.75)
+  Class crops_fair_skin_esantema-morbilliforme: Coverage = 0.821 (Target ≥ 0.75)
+  Class crops_fair_skin_esantema-polimorfo-like: Coverage = 0.713 (Target ≥ 0.75)
+  Class crops_fair_skin_esantema-virale: Coverage = 0.740 (Target ≥ 0.75)
+  Class crops_fair_skin_esantema_iatrogeno_farmaco_indotta: Coverage = 0.808 (Target ≥ 0.75)
+  Class crops_fair_skin_orticaria: Coverage = 0.739 (Target ≥ 0.75)
+  Class crops_fair_skin_pediculosi: Coverage = 0.816 (Target ≥ 0.75)
+  Class crops_fair_skin_scabbia: Coverage = 0.759 (Target ≥ 0.75)
+  Class crops_fair_skin_varicella: Coverage = 0.717 (Target ≥ 0.75)
+
+ FSC Metric (minimum class-wise coverage): 0.713
+
+ Feature-Stratified Coverage (by True Class Label):
+  Class crops_fair_skin_esantema-maculo-papuloso: Coverage = 0.733 (Target ≥ 0.75)
+  Class crops_fair_skin_esantema-morbilliforme: Coverage = 0.821 (Target ≥ 0.75)
+  Class crops_fair_skin_esantema-polimorfo-like: Coverage = 0.713 (Target ≥ 0.75)
+  Class crops_fair_skin_esantema-virale: Coverage = 0.740 (Target ≥ 0.75)
+  Class crops_fair_skin_esantema_iatrogeno_farmaco_indotta: Coverage = 0.808 (Target ≥ 0.75)
+  Class crops_fair_skin_orticaria: Coverage = 0.739 (Target ≥ 0.75)
+  Class crops_fair_skin_pediculosi: Coverage = 0.816 (Target ≥ 0.75)
+  Class crops_fair_skin_scabbia: Coverage = 0.759 (Target ≥ 0.75)
+  Class crops_fair_skin_varicella: Coverage = 0.717 (Target ≥ 0.75)
+
+ FSC Metric (minimum class-wise coverage): 0.713
+
+ Feature-Stratified Coverage (by True Class Label):
+  Class crops_fair_skin_esantema-maculo-papuloso: Coverage = 0.733 (Target ≥ 0.75)
+  Class crops_fair_skin_esantema-morbilliforme: Coverage = 0.821 (Target ≥ 0.75)
+  Class crops_fair_skin_esantema-polimorfo-like: Coverage = 0.713 (Target ≥ 0.75)
+  Class crops_fair_skin_esantema-virale: Coverage = 0.740 (Target ≥ 0.75)
+  Class crops_fair_skin_esantema_iatrogeno_farmaco_indotta: Coverage = 0.808 (Target ≥ 0.75)
+  Class crops_fair_skin_orticaria: Coverage = 0.739 (Target ≥ 0.75)
+  Class crops_fair_skin_pediculosi: Coverage = 0.816 (Target ≥ 0.75)
+  Class crops_fair_skin_scabbia: Coverage = 0.759 (Target ≥ 0.75)
+  Class crops_fair_skin_varicella: Coverage = 0.717 (Target ≥ 0.75)
+
+ FSC Metric (minimum class-wise coverage): 0.713
+
+ Correlation between class frequency and coverage:
+  - Pearson  r = -0.250, p = 5.157e-01
+  - Spearman ρ = -0.183, p = 6.368e-01
+
+ Size-Stratified Coverage (SSC):
+  Set Size [1]       : Coverage = 0.999 (Target ≥ 0.75)
+
+ SSC Metric (min bin-wise coverage): 0.999
+
+ Size-Stratified Coverage (SSC):
+  Set Size [1]       : Coverage = 0.999 (Target ≥ 0.75)
+
+ SSC Metric (min bin-wise coverage): 0.999
+
+===================================================
+ Target coverage: 0.80  |  alpha = 0.20
+===================================================
+
+###########################Results:###################################
+test_run 1
+Target coverage: 0.800
+Alpha: 0.200
+Coverage: 0.800
+Average Prediction Set Size for Test Set: 0.801
+######################################################################
+
+ Feature-Stratified Coverage (by True Class Label):
+  Class crops_fair_skin_esantema-maculo-papuloso: Coverage = 0.780 (Target ≥ 0.80)
+  Class crops_fair_skin_esantema-morbilliforme: Coverage = 0.856 (Target ≥ 0.80)
+  Class crops_fair_skin_esantema-polimorfo-like: Coverage = 0.762 (Target ≥ 0.80)
+  Class crops_fair_skin_esantema-virale: Coverage = 0.792 (Target ≥ 0.80)
+  Class crops_fair_skin_esantema_iatrogeno_farmaco_indotta: Coverage = 0.851 (Target ≥ 0.80)
+  Class crops_fair_skin_orticaria: Coverage = 0.795 (Target ≥ 0.80)
+  Class crops_fair_skin_pediculosi: Coverage = 0.861 (Target ≥ 0.80)
+  Class crops_fair_skin_scabbia: Coverage = 0.806 (Target ≥ 0.80)
+  Class crops_fair_skin_varicella: Coverage = 0.749 (Target ≥ 0.80)
+
+ FSC Metric (minimum class-wise coverage): 0.749
+
+ Feature-Stratified Coverage (by True Class Label):
+  Class crops_fair_skin_esantema-maculo-papuloso: Coverage = 0.780 (Target ≥ 0.80)
+  Class crops_fair_skin_esantema-morbilliforme: Coverage = 0.856 (Target ≥ 0.80)
+  Class crops_fair_skin_esantema-polimorfo-like: Coverage = 0.762 (Target ≥ 0.80)
+  Class crops_fair_skin_esantema-virale: Coverage = 0.792 (Target ≥ 0.80)
+  Class crops_fair_skin_esantema_iatrogeno_farmaco_indotta: Coverage = 0.851 (Target ≥ 0.80)
+  Class crops_fair_skin_orticaria: Coverage = 0.795 (Target ≥ 0.80)
+  Class crops_fair_skin_pediculosi: Coverage = 0.861 (Target ≥ 0.80)
+  Class crops_fair_skin_scabbia: Coverage = 0.806 (Target ≥ 0.80)
+  Class crops_fair_skin_varicella: Coverage = 0.749 (Target ≥ 0.80)
+
+ FSC Metric (minimum class-wise coverage): 0.749
+
+ Feature-Stratified Coverage (by True Class Label):
+  Class crops_fair_skin_esantema-maculo-papuloso: Coverage = 0.780 (Target ≥ 0.80)
+  Class crops_fair_skin_esantema-morbilliforme: Coverage = 0.856 (Target ≥ 0.80)
+  Class crops_fair_skin_esantema-polimorfo-like: Coverage = 0.762 (Target ≥ 0.80)
+  Class crops_fair_skin_esantema-virale: Coverage = 0.792 (Target ≥ 0.80)
+  Class crops_fair_skin_esantema_iatrogeno_farmaco_indotta: Coverage = 0.851 (Target ≥ 0.80)
+  Class crops_fair_skin_orticaria: Coverage = 0.795 (Target ≥ 0.80)
+  Class crops_fair_skin_pediculosi: Coverage = 0.861 (Target ≥ 0.80)
+  Class crops_fair_skin_scabbia: Coverage = 0.806 (Target ≥ 0.80)
+  Class crops_fair_skin_varicella: Coverage = 0.749 (Target ≥ 0.80)
+
+ FSC Metric (minimum class-wise coverage): 0.749
+
+ Correlation between class frequency and coverage:
+  - Pearson  r = -0.133, p = 7.331e-01
+  - Spearman ρ = -0.083, p = 8.312e-01
+
+ Size-Stratified Coverage (SSC):
+  Set Size [1]       : Coverage = 0.998 (Target ≥ 0.80)
+
+ SSC Metric (min bin-wise coverage): 0.998
+
+ Size-Stratified Coverage (SSC):
+  Set Size [1]       : Coverage = 0.998 (Target ≥ 0.80)
+
+ SSC Metric (min bin-wise coverage): 0.998
+
+===================================================
+ Target coverage: 0.85  |  alpha = 0.15
+===================================================
+
+###########################Results:###################################
+test_run 1
+Target coverage: 0.850
+Alpha: 0.150
+Coverage: 0.849
+Average Prediction Set Size for Test Set: 0.852
+######################################################################
+
+ Feature-Stratified Coverage (by True Class Label):
+  Class crops_fair_skin_esantema-maculo-papuloso: Coverage = 0.827 (Target ≥ 0.85)
+  Class crops_fair_skin_esantema-morbilliforme: Coverage = 0.891 (Target ≥ 0.85)
+  Class crops_fair_skin_esantema-polimorfo-like: Coverage = 0.804 (Target ≥ 0.85)
+  Class crops_fair_skin_esantema-virale: Coverage = 0.842 (Target ≥ 0.85)
+  Class crops_fair_skin_esantema_iatrogeno_farmaco_indotta: Coverage = 0.891 (Target ≥ 0.85)
+  Class crops_fair_skin_orticaria: Coverage = 0.849 (Target ≥ 0.85)
+  Class crops_fair_skin_pediculosi: Coverage = 0.896 (Target ≥ 0.85)
+  Class crops_fair_skin_scabbia: Coverage = 0.850 (Target ≥ 0.85)
+  Class crops_fair_skin_varicella: Coverage = 0.791 (Target ≥ 0.85)
+
+ FSC Metric (minimum class-wise coverage): 0.791
+
+ Feature-Stratified Coverage (by True Class Label):
+  Class crops_fair_skin_esantema-maculo-papuloso: Coverage = 0.827 (Target ≥ 0.85)
+  Class crops_fair_skin_esantema-morbilliforme: Coverage = 0.891 (Target ≥ 0.85)
+  Class crops_fair_skin_esantema-polimorfo-like: Coverage = 0.804 (Target ≥ 0.85)
+  Class crops_fair_skin_esantema-virale: Coverage = 0.842 (Target ≥ 0.85)
+  Class crops_fair_skin_esantema_iatrogeno_farmaco_indotta: Coverage = 0.891 (Target ≥ 0.85)
+  Class crops_fair_skin_orticaria: Coverage = 0.849 (Target ≥ 0.85)
+  Class crops_fair_skin_pediculosi: Coverage = 0.896 (Target ≥ 0.85)
+  Class crops_fair_skin_scabbia: Coverage = 0.850 (Target ≥ 0.85)
+  Class crops_fair_skin_varicella: Coverage = 0.791 (Target ≥ 0.85)
+
+ FSC Metric (minimum class-wise coverage): 0.791
+
+ Feature-Stratified Coverage (by True Class Label):
+  Class crops_fair_skin_esantema-maculo-papuloso: Coverage = 0.827 (Target ≥ 0.85)
+  Class crops_fair_skin_esantema-morbilliforme: Coverage = 0.891 (Target ≥ 0.85)
+  Class crops_fair_skin_esantema-polimorfo-like: Coverage = 0.804 (Target ≥ 0.85)
+  Class crops_fair_skin_esantema-virale: Coverage = 0.842 (Target ≥ 0.85)
+  Class crops_fair_skin_esantema_iatrogeno_farmaco_indotta: Coverage = 0.891 (Target ≥ 0.85)
+  Class crops_fair_skin_orticaria: Coverage = 0.849 (Target ≥ 0.85)
+  Class crops_fair_skin_pediculosi: Coverage = 0.896 (Target ≥ 0.85)
+  Class crops_fair_skin_scabbia: Coverage = 0.850 (Target ≥ 0.85)
+  Class crops_fair_skin_varicella: Coverage = 0.791 (Target ≥ 0.85)
+
+ FSC Metric (minimum class-wise coverage): 0.791
+
+ Correlation between class frequency and coverage:
+  - Pearson  r = 0.001, p = 9.979e-01
+  - Spearman ρ = 0.000, p = 1.000e+00
+
+ Size-Stratified Coverage (SSC):
+  Set Size [1]       : Coverage = 0.997 (Target ≥ 0.85)
+
+ SSC Metric (min bin-wise coverage): 0.997
+
+ Size-Stratified Coverage (SSC):
+  Set Size [1]       : Coverage = 0.997 (Target ≥ 0.85)
+
+ SSC Metric (min bin-wise coverage): 0.997
+
+===================================================
+ Target coverage: 0.90  |  alpha = 0.10
+===================================================
+
+###########################Results:###################################
+test_run 1
+Target coverage: 0.900
+Alpha: 0.100
+Coverage: 0.899
+Average Prediction Set Size for Test Set: 0.904
+######################################################################
+
+ Feature-Stratified Coverage (by True Class Label):
+  Class crops_fair_skin_esantema-maculo-papuloso: Coverage = 0.877 (Target ≥ 0.90)
+  Class crops_fair_skin_esantema-morbilliforme: Coverage = 0.920 (Target ≥ 0.90)
+  Class crops_fair_skin_esantema-polimorfo-like: Coverage = 0.848 (Target ≥ 0.90)
+  Class crops_fair_skin_esantema-virale: Coverage = 0.892 (Target ≥ 0.90)
+  Class crops_fair_skin_esantema_iatrogeno_farmaco_indotta: Coverage = 0.928 (Target ≥ 0.90)
+  Class crops_fair_skin_orticaria: Coverage = 0.904 (Target ≥ 0.90)
+  Class crops_fair_skin_pediculosi: Coverage = 0.930 (Target ≥ 0.90)
+  Class crops_fair_skin_scabbia: Coverage = 0.901 (Target ≥ 0.90)
+  Class crops_fair_skin_varicella: Coverage = 0.836 (Target ≥ 0.90)
+
+ FSC Metric (minimum class-wise coverage): 0.836
+
+ Feature-Stratified Coverage (by True Class Label):
+  Class crops_fair_skin_esantema-maculo-papuloso: Coverage = 0.877 (Target ≥ 0.90)
+  Class crops_fair_skin_esantema-morbilliforme: Coverage = 0.920 (Target ≥ 0.90)
+  Class crops_fair_skin_esantema-polimorfo-like: Coverage = 0.848 (Target ≥ 0.90)
+  Class crops_fair_skin_esantema-virale: Coverage = 0.892 (Target ≥ 0.90)
+  Class crops_fair_skin_esantema_iatrogeno_farmaco_indotta: Coverage = 0.928 (Target ≥ 0.90)
+  Class crops_fair_skin_orticaria: Coverage = 0.904 (Target ≥ 0.90)
+  Class crops_fair_skin_pediculosi: Coverage = 0.930 (Target ≥ 0.90)
+  Class crops_fair_skin_scabbia: Coverage = 0.901 (Target ≥ 0.90)
+  Class crops_fair_skin_varicella: Coverage = 0.836 (Target ≥ 0.90)
+
+ FSC Metric (minimum class-wise coverage): 0.836
+
+ Feature-Stratified Coverage (by True Class Label):
+  Class crops_fair_skin_esantema-maculo-papuloso: Coverage = 0.877 (Target ≥ 0.90)
+  Class crops_fair_skin_esantema-morbilliforme: Coverage = 0.920 (Target ≥ 0.90)
+  Class crops_fair_skin_esantema-polimorfo-like: Coverage = 0.848 (Target ≥ 0.90)
+  Class crops_fair_skin_esantema-virale: Coverage = 0.892 (Target ≥ 0.90)
+  Class crops_fair_skin_esantema_iatrogeno_farmaco_indotta: Coverage = 0.928 (Target ≥ 0.90)
+  Class crops_fair_skin_orticaria: Coverage = 0.904 (Target ≥ 0.90)
+  Class crops_fair_skin_pediculosi: Coverage = 0.930 (Target ≥ 0.90)
+  Class crops_fair_skin_scabbia: Coverage = 0.901 (Target ≥ 0.90)
+  Class crops_fair_skin_varicella: Coverage = 0.836 (Target ≥ 0.90)
+
+ FSC Metric (minimum class-wise coverage): 0.836
+
+ Correlation between class frequency and coverage:
+  - Pearson  r = 0.167, p = 6.671e-01
+  - Spearman ρ = 0.033, p = 9.322e-01
+
+ Size-Stratified Coverage (SSC):
+  Set Size [1]       : Coverage = 0.994 (Target ≥ 0.90)
+
+ SSC Metric (min bin-wise coverage): 0.994
+
+ Size-Stratified Coverage (SSC):
+  Set Size [1]       : Coverage = 0.994 (Target ≥ 0.90)
+
+ SSC Metric (min bin-wise coverage): 0.994
+
+===================================================
+ Target coverage: 0.95  |  alpha = 0.05
+===================================================
+
+###########################Results:###################################
+test_run 1
+Target coverage: 0.950
+Alpha: 0.050
+Coverage: 0.951
+Average Prediction Set Size for Test Set: 0.964
+######################################################################
+
+ Feature-Stratified Coverage (by True Class Label):
+  Class crops_fair_skin_esantema-maculo-papuloso: Coverage = 0.935 (Target ≥ 0.95)
+  Class crops_fair_skin_esantema-morbilliforme: Coverage = 0.963 (Target ≥ 0.95)
+  Class crops_fair_skin_esantema-polimorfo-like: Coverage = 0.913 (Target ≥ 0.95)
+  Class crops_fair_skin_esantema-virale: Coverage = 0.947 (Target ≥ 0.95)
+  Class crops_fair_skin_esantema_iatrogeno_farmaco_indotta: Coverage = 0.964 (Target ≥ 0.95)
+  Class crops_fair_skin_orticaria: Coverage = 0.958 (Target ≥ 0.95)
+  Class crops_fair_skin_pediculosi: Coverage = 0.965 (Target ≥ 0.95)
+  Class crops_fair_skin_scabbia: Coverage = 0.949 (Target ≥ 0.95)
+  Class crops_fair_skin_varicella: Coverage = 0.895 (Target ≥ 0.95)
+
+ FSC Metric (minimum class-wise coverage): 0.895
+
+ Feature-Stratified Coverage (by True Class Label):
+  Class crops_fair_skin_esantema-maculo-papuloso: Coverage = 0.935 (Target ≥ 0.95)
+  Class crops_fair_skin_esantema-morbilliforme: Coverage = 0.963 (Target ≥ 0.95)
+  Class crops_fair_skin_esantema-polimorfo-like: Coverage = 0.913 (Target ≥ 0.95)
+  Class crops_fair_skin_esantema-virale: Coverage = 0.947 (Target ≥ 0.95)
+  Class crops_fair_skin_esantema_iatrogeno_farmaco_indotta: Coverage = 0.964 (Target ≥ 0.95)
+  Class crops_fair_skin_orticaria: Coverage = 0.958 (Target ≥ 0.95)
+  Class crops_fair_skin_pediculosi: Coverage = 0.965 (Target ≥ 0.95)
+  Class crops_fair_skin_scabbia: Coverage = 0.949 (Target ≥ 0.95)
+  Class crops_fair_skin_varicella: Coverage = 0.895 (Target ≥ 0.95)
+
+ FSC Metric (minimum class-wise coverage): 0.895
+
+ Feature-Stratified Coverage (by True Class Label):
+  Class crops_fair_skin_esantema-maculo-papuloso: Coverage = 0.935 (Target ≥ 0.95)
+  Class crops_fair_skin_esantema-morbilliforme: Coverage = 0.963 (Target ≥ 0.95)
+  Class crops_fair_skin_esantema-polimorfo-like: Coverage = 0.913 (Target ≥ 0.95)
+  Class crops_fair_skin_esantema-virale: Coverage = 0.947 (Target ≥ 0.95)
+  Class crops_fair_skin_esantema_iatrogeno_farmaco_indotta: Coverage = 0.964 (Target ≥ 0.95)
+  Class crops_fair_skin_orticaria: Coverage = 0.958 (Target ≥ 0.95)
+  Class crops_fair_skin_pediculosi: Coverage = 0.965 (Target ≥ 0.95)
+  Class crops_fair_skin_scabbia: Coverage = 0.949 (Target ≥ 0.95)
+  Class crops_fair_skin_varicella: Coverage = 0.895 (Target ≥ 0.95)
+
+ FSC Metric (minimum class-wise coverage): 0.895
+
+ Correlation between class frequency and coverage:
+  - Pearson  r = 0.278, p = 4.687e-01
+  - Spearman ρ = 0.033, p = 9.322e-01
+
+ Size-Stratified Coverage (SSC):
+  Set Size [1]       : Coverage = 0.986 (Target ≥ 0.95)
+
+ SSC Metric (min bin-wise coverage): 0.986
+
+ Size-Stratified Coverage (SSC):
+  Set Size [1]       : Coverage = 0.986 (Target ≥ 0.95)
+
+ SSC Metric (min bin-wise coverage): 0.986
+
+Finished multi-alpha conformal evaluation for alphas corresponding to coverage 0.65–0.95.
+Results saved under: Results_normal_Conformal_Prediction_experiment_run_1_2026-01-09_14-58-26
+Job finished at Fri Jan  9 15:19:03 CET 2026
